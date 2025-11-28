@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Idrees | About Me</title>
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Internal CSS for custom variables and typography -->
+    <style>
+        :root {
+            /* Muted, professional color palette */
+            --primary-text: #2c3e50; /* Dark Blue/Gray */
+            --secondary-text: #7f8c8d; /* Muted Gray */
+            --background-color: #fcfbf8; /* Light Off-White */
+            --accent-color: #bfa17c; /* Muted Gold/Brown */
+            --font-serif: "Playfair Display", serif;
+            --font-sans: "Inter", sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background-color);
+            color: var(--primary-text);
+            line-height: 1.6;
+        }
+        .header-font {
+            font-family: var(--font-serif);
+        }
+        /* Custom style for the active navigation link */
+        .nav-active {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- SEMANTIC HTML: HEADER for the top of the page -->
+    <header class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-10">
+        <!-- SEMANTIC HTML: NAV for the navigation links -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <span class="header-font text-2xl font-bold tracking-wider text-[var(--primary-text)]">Amna Idrees</span>
+                </div>
+                <div class="flex space-x-8">
+                    <!-- Nav Link 1: Active page -->
+                    <a href="aboutus.html" class="nav-active text-lg transition duration-200">About Me</a>
+                    <!-- Nav Link 2: Link to the other page -->
+                    <a href="projects.html" class="text-[var(--secondary-text)] hover:text-[var(--accent-color)] text-lg font-semibold transition duration-200">Projects & Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SEMANTIC HTML: MAIN for the primary content of the page -->
+    <main class="flex-grow">
+        <!-- Hero/Introduction Section -->
+        <!-- SEMANTIC HTML: SECTION for thematic grouping -->
+        <section class="py-24 md:py-32 border-b border-gray-200">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <!-- SEMANTIC HTML: H1 for the main heading -->
+                <h1 class="header-font text-6xl md:text-8xl font-light leading-tight mb-6">
+                    Connecting <span class="text-[var(--accent-color)]">Code</span> to <span class="text-[var(--accent-color)]">Creation.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-[var(--secondary-text)] max-w-2xl mx-auto">
+                    Computer Science Student | Aspiring Software Engineer | Specializing in Full-Stack Development and Cloud Architecture.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Me Description Section -->
+        <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-3 gap-12">
+            
+            <!-- Picture/Avatar -->
+            <div class="md:col-span-1 flex justify-center md:justify-start">
+                <div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-[var(--accent-color)]/50">
+                    <img src="https://placehold.co/600x600/bfa17c/ffffff?text=Amna+Idrees" 
+                         alt="Professional portrait of Amna Idrees" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Detailed Description -->
+            <div class="md:col-span-2">
+                <!-- SEMANTIC HTML: H2 for section heading -->
+                <h2 class="header-font text-4xl font-light mb-6">My Journey in Tech</h2>
+                <!-- SEMANTIC HTML: P for paragraphs -->
+                <p class="text-lg mb-4 text-gray-700">
+                    I am a dedicated Computer Science student passionate about building efficient, scalable, and impactful software solutions. My academic focus at [Your University/College Name] has provided a strong foundation in Data Structures, Algorithms, and Object-Oriented Programming (OOP).
+                </p>
+                <p class="text-lg mb-4 text-gray-700">
+                    I thrive on translating complex problems into elegant code. I have actively sought out opportunities to apply classroom knowledge through hands-on projects, focusing primarily on Python for backend services and JavaScript/React for dynamic user interfaces.
+                </p>
+                <p class="text-lg text-gray-700">
+                    I am committed to continuous learning and embracing new technologies. Head over to the *Projects & Contact* page to see some of my work and get in touch!
+                </p>
+                <a href="projects.html" class="mt-8 inline-block px-8 py-3 bg-[var(--accent-color)] text-white text-lg font-semibold rounded-lg shadow-xl hover:bg-opacity-90 transition duration-300">
+                    View My Projects →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- SEMANTIC HTML: FOOTER for copyright/contact details -->
+    <footer class="text-center py-8 border-t border-gray-200 mt-auto text-[var(--secondary-text)]">
+        <p>&copy; 2025 Amna Idrees. Computer Science Portfolio.</p>
+    </footer>
+
+</body>
+</html>

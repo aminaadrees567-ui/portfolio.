@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Idrees | Projects</title>
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Internal CSS for custom variables and typography -->
+    <style>
+        :root {
+            /* Muted, professional color palette */
+            --primary-text: #2c3e50; /* Dark Blue/Gray */
+            --secondary-text: #7f8c8d; /* Muted Gray */
+            --background-color: #fcfbf8; /* Light Off-White */
+            --accent-color: #bfa17c; /* Muted Gold/Brown */
+            --font-serif: "Playfair Display", serif;
+            --font-sans: "Inter", sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background-color);
+            color: var(--primary-text);
+            line-height: 1.6;
+        }
+        .header-font {
+            font-family: var(--font-serif);
+        }
+        /* Custom style for skill badges */
+        .skill-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #e5e5e5;
+            color: var(--primary-text);
+            font-weight: 500;
+            border-radius: 9999px;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            transition: background-color 0.2s;
+        }
+        /* Custom style for the active navigation link */
+        .nav-active {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- SEMANTIC HTML: HEADER for the top of the page -->
+    <header class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-10">
+        <!-- SEMANTIC HTML: NAV for the navigation links -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <span class="header-font text-2xl font-bold tracking-wider text-[var(--primary-text)]">Amna Idrees</span>
+                </div>
+                <div class="flex space-x-8">
+                    <!-- Nav Link 1: Link to the other page -->
+                    <a href="aboutus.html" class="text-[var(--secondary-text)] hover:text-[var(--accent-color)] text-lg font-semibold transition duration-200">About Me</a>
+                    <!-- Nav Link 2: Active page -->
+                    <a href="projects.html" class="nav-active text-lg transition duration-200">Projects & Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SEMANTIC HTML: MAIN for the primary content of the page -->
+    <main class="max-w-7xl mx-auto px-6 py-16 md:py-24 flex-grow">
+        
+        <!-- SEMANTIC HTML: H1 for the main heading -->
+        <h1 class="header-font text-5xl md:text-7xl font-light text-center mb-16">
+            My <span class="text-[var(--accent-color)]">Work</span> & <span class="text-[var(--accent-color)]">Skills</span>
+        </h1>
+
+        <!-- Skills Section -->
+        <!-- SEMANTIC HTML: SECTION for thematic grouping -->
+        <section class="mb-20">
+            <!-- SEMANTIC HTML: H2 for section heading -->
+            <h2 class="header-font text-3xl font-normal mb-8 text-center border-b pb-2">Technical Skills</h2>
+            <div class="flex flex-wrap justify-center max-w-4xl mx-auto">
+                <!-- Skills listed using DIVs/SPANS for flexible tagging -->
+                <span class="skill-badge">Python (Flask/Django)</span>
+                <span class="skill-badge">JavaScript (ES6+)</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">C/C++</span>
+                <span class="skill-badge">React & Next.js</span>
+                <span class="skill-badge">Node.js / Express</span>
+                <span class="skill-badge">Tailwind CSS</span>
+                <span class="skill-badge">PostgreSQL & MongoDB</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Cloud Computing (AWS/Azure)</span>
+                <span class="skill-badge">Git & GitHub</span>
+                <span class="skill-badge">Data Structures & Algorithms</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-20">
+            <h2 class="header-font text-3xl font-normal mb-10 text-center border-b pb-2">Featured Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Project 1 (Uses DIV as an ARTICLE/CARD equivalent) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--accent-color)]">
+                    <h3 class="text-xl font-semibold mb-2">E-Commerce Backend API</h3>
+                    <p class="text-sm text-gray-500 mb-4">Python | Django | PostgreSQL</p>
+                    <p class="text-gray-700">Developed a robust RESTful API for an e-commerce platform, handling user authentication, product management, and order processing. Implemented optimized database indexing.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--accent-color)]">
+                    <h3 class="text-xl font-semibold mb-2">Real-Time Chat Application</h3>
+                    <p class="text-sm text-gray-500 mb-4">React | Firebase | Firestore</p>
+                    <p class="text-gray-700">A fully functional single-page application enabling real-time messaging. Used Firebase for authentication and Firestore for NoSQL database management.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--accent-color)]">
+                    <h3 class="text-xl font-semibold mb-2">Data Visualization Dashboard</h3>
+                    <p class="text-sm text-gray-500 mb-4">JavaScript | D3.js | HTML/CSS</p>
+                    <p class="text-gray-700">Created an interactive dashboard to visualize public data on global trends. Focused on responsive design and clear data storytelling using the D3.js library.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="text-center py-16 bg-white rounded-xl shadow-2xl">
+            <h2 class="header-font text-4xl font-light mb-4">Get In Touch</h2>
+            <p class="text-xl text-[var(--secondary-text)] mb-8 max-w-xl mx-auto">
+                I am actively seeking internship opportunities and collaborations on challenging projects. Let's connect!
+            </p>
+            <address class="space-y-4 not-italic">
+                <!-- SEMANTIC HTML: ADDRESS for contact information -->
+                <p class="text-2xl font-medium text-[var(--primary-text)]">
+                    Email: <a href="mailto:amna.idrees.cs@example.com" class="text-[var(--accent-color)] hover:underline">amna.idrees.cs@example.com</a>
+                </p>
+                <p class="text-xl text-gray-600">
+                    LinkedIn: <a href="#linkedin-url" class="text-[var(--accent-color)] hover:underline">/in/amna-idrees-cs</a>
+                </p>
+                <p class="text-xl text-gray-600">
+                    GitHub: <a href="#github-url" class="text-[var(--accent-color)] hover:underline">/amnaidrees-dev</a>
+                </p>
+            </address>
+        </section>
+    </main>
+
+    <!-- SEMANTIC HTML: FOOTER for copyright/contact details -->
+    <footer class="text-center py-8 border-t border-gray-200 mt-auto text-[var(--secondary-text)]">
+        <p>&copy; 2025 Amna Idrees. Computer Science Portfolio.</p>
+    </footer>
+
+</body>
+</html>
