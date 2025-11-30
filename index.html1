@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Idrees - CS Student Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1D4ED8', // Blue 700 (Focus on tech/academic blue)
+                        'secondary': '#059669', // Emerald 600
+                        'background': '#F9FAFB', // Gray 50
+                        'card': '#FFFFFF', // White
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scroll behavior for smooth navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the project cards on hover */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(29, 78, 216, 0.2), 0 5px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background font-sans text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-card shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#" class="text-xl font-extrabold text-primary tracking-wider">Amna Idrees | CS</a>
+                <!-- Navigation Links -->
+                <div class="flex space-x-4">
+                    <a href="#about" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Foundations</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Assignments</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="text-center py-20 md:py-28 bg-card rounded-2xl shadow-2xl mb-16 border-t-4 border-primary">
+            <div class="max-w-4xl mx-auto">
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
+                    Aspiring <span class="text-primary">Software Developer</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-600 mb-6 font-light">
+                    Hello! I'm *Amna Idrees*, a motivated Computer Science student in my first semester, passionate about mastering foundational logic and data structures.
+                </p>
+                <div class="flex justify-center space-x-4 mb-8">
+                     <!-- Placeholder Badge for Student Status -->
+                    <span class="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full bg-secondary text-white shadow-md">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 110-6 3 3 0 010 6z"></path></svg>
+                        Semester 1
+                    </span>
+                    <a href="https://github.com/aminaadrees567-ui" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300 shadow-md">
+                        <svg class="w-4 h-4 mr-1.5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.69.084-.69 1.205.084 1.838 1.237 1.838 1.237 1.07 1.836 2.809 1.305 3.492.998.108-.77.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.292-1.552 3.3-.928 3.3-.928.652 1.652.241 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.803 5.624-5.475 5.924.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.802 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub Profile
+                    </a>
+                </div>
+                <!-- Optional: Link to your Resume/CV -->
+                <a href="#contact" class="inline-block px-8 py-3 text-lg font-semibold text-white bg-secondary rounded-lg shadow-xl hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
+                    Let's Connect
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Foundational Learning (About Section) -->
+        <section id="about" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary pb-2">Foundational Learning</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-semibold text-primary mb-3">My First Semester Journey</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        This semester has been focused on building a strong understanding of fundamental programming principles. I've successfully completed modules in *Introduction to Programming* (focusing on procedural logic and control structures) and *Discrete Mathematics* (essential for computational thinking).
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        I am currently developing proficiency in C/C++ for low-level concepts and Python for scripting and problem-solving. My goal is to use these foundational skills to transition into building robust data structures and algorithms next semester.
+                    </p>
+                </div>
+                <!-- Skills/Toolbox -->
+                <div class="md:col-span-1 bg-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Core Toolbox</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">C/C++</span>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python (Basics)</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">HTML5 & CSS3</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Procedural Logic</span>
+                        <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Git & Version Control</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Projects/Assignments Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary pb-2">Course Assignments & Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1: Console App -->
+                <div class="project-card bg-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-3">Basic Console Calculator</h3>
+                    <p class="text-gray-600 mb-4">
+                        A command-line application demonstrating fundamental concepts like user input/output, conditional statements (if/else), and basic arithmetic operations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-secondary text-white text-xs font-medium px-2 py-0.5 rounded-full">C++</span>
+                        <span class="bg-secondary text-white text-xs font-medium px-2 py-0.5 rounded-full">Conditionals</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/aminaadrees567-ui/calculator-assignment" target="_blank" class="text-sm text-primary hover:text-blue-700 font-semibold flex items-center">
+                            View Source Code
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Web Basics -->
+                <div class="project-card bg-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-3">Simple Responsive Landing Page</h3>
+                    <p class="text-gray-600 mb-4">
+                        First exposure to web development. Focus on semantic HTML structure and responsive CSS techniques for various screen sizes.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-secondary text-white text-xs font-medium px-2 py-0.5 rounded-full">HTML5</span>
+                        <span class="bg-secondary text-white text-xs font-medium px-2 py-0.5 rounded-full">CSS</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/aminaadrees567-ui/landing-page-assignment" target="_blank" class="text-sm text-primary hover:text-blue-700 font-semibold flex items-center">
+                            View Source Code
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Basic Logic/Arrays -->
+                <div class="project-card bg-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-primary mb-3">Simple Student Grade Manager</h3>
+                    <p class="text-gray-600 mb-4">
+                        A program utilizing arrays/lists to store and calculate average scores for a small group of students, focusing on looping and data manipulation.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-secondary text-white text-xs font-medium px-2 py-0.5 rounded-full">Python</span>
+                        <span class="bg-secondary text-white text-xs font-medium px-2 py-0.5 rounded-full">Arrays/Lists</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/aminaadrees567-ui/grade-manager" target="_blank" class="text-sm text-primary hover:text-blue-700 font-semibold flex items-center">
+                            View Source Code
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-16 bg-card rounded-xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary pb-2">Let's Connect</h2>
+            <p class="text-lg text-gray-700 mb-6 max-w-2xl">
+                I'm eager to learn from experienced developers and connect with peers. Feel free to reach out for collaboration or academic discussions!
+            </p>
+            <div class="space-y-4">
+                <p class="flex items-center text-lg text-gray-800">
+                    <span class="font-semibold w-24">Email:</span>
+                    <a href="mailto:amna.idrees.cs@example.com" class="text-primary hover:underline font-medium">amna.idrees.cs@example.com <span class="text-red-500 text-sm">(REPLACE ME)</span></a>
+                </p>
+                <p class="flex items-center text-lg text-gray-800">
+                    <span class="font-semibold w-24">Phone:</span>
+                    <span class="font-medium text-gray-700">+92 348 7223431</span>
+                </p>
+                <p class="flex items-center text-lg text-gray-800">
+                    <span class="font-semibold w-24">GitHub:</span>
+                    <a href="https://github.com/aminaadrees567-ui" target="_blank" class="text-primary hover:underline font-medium">aminaadrees567-ui</a>
+                </p>
+                <p class="flex items-center text-lg text-gray-800">
+                    <span class="font-semibold w-24">LinkedIn:</span>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-primary hover:underline font-medium">linkedin.com/in/yourprofile</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-6 mt-16">
+        <p class="text-sm">Built with passion by Amna Idrees | CS Student. &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
